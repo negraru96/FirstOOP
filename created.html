@@ -1,25 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv"X-UA-Compatible" content="ie-edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script type="text/javascript" src="{{ url_for('static', filename='js/DSmessage.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/naranja_janja.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Shojumaru|Ubuntu" rel="stylesheet">
+  <style>
+  .container{
+    text-align: center;
+  }
+  .container2{
+    display: inline-block;
+  }
+  .container3{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .container4{
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .navbar{
+      overflow: visible;
+      background-color: orange;
+      color: orange;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  .navbar-brand{
+    color: white;
+    font-family: 'Shojumaru', cursive;
+  }
+  .form-group{
+    margin: 5px;
+  }
+  .from-row{
+    margin-left: 100px;
+  }
+  .btn-primary{
+    background-color: orange;
+  }
+  .title{
+    color: orange;
+    font-family: 'Shojumaru', cursive;
+    font-size: 50px;
+  }
+  .display-4{
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .lead{
+    font-family: 'Ubuntu', sans-serif;
+  }
 
+  </style>
 </head>
 <body>
+  <nav class="navbar">
+  <a class="navbar-brand" href="#">Naranja Janja</a>
+</nav>
 
 <div class="container">
-  <h1>Submitted Info</h1>
-  <p>Name: {{request.form["Name"] }}</p>
-  <p>Email: {{request.form["Email"] }}</p>
-  <p>City: {{request.form["City"] }}</p>
-  <p>Activity: {{request.form["Activity"] }}</p>
-  <p>Other: {{request.form["Other"] }}</p>
-  <a class="btn btn-secondary" href="/">Go Back</a>
-</div>
 
+  <div class="jumbotron">
+  <div class="title">Payment Submitted!</div>
+  <p class="lead">Stand by while we send you an email of your reciept!</p>
+<div>
+<br>
+<br>
+  <p class="lead">Order Review:</p>
+<br>
+<div class="container2">
+    <form action='/checkout' method='post'>
+      <table>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>Orange Smoothie</td>
+            <td>{{request.form["OQuantity"]}}</td>
+          </tr>
+          <tr>
+            <td>Mango Smoothie</td>
+            <td>{{request.form["MQuantity"]}}</td>
+          </tr>
+          <tr>
+            <td>Strawberry Smoothie</td>
+            <td>{{request.form["SQuantity"]}}</td>
+          </tr>
+          <tr>
+            <td>Island Smoothie</td>
+            <td>{{request.form["IQuantity"]}}</td>
+          </tr>
+      </table>
+</div>
+<br>
+<br>
+<p class="lead">Your Information</p>
+<div class="container3">
+  <p>First Name: {{request.form["FName"] }}</p>
+  <p>Last Name: {{request.form["LName"] }}</p>
+  <p>Email: {{request.form["Email"] }}</p>
+  <p>Address: {{request.form["Address"] }}</p>
+  <p>City: {{request.form["City"] }}</p>
+  <p>State: {{request.form["State"] }}</p>
+  <p>Zip: {{request.form["Zip"] }}</p>
+    <button type="submit" class="btn btn-primary">Go Back</button>
+  </form>
+</div>
+</div>
 </body>
 </html>

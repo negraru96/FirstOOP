@@ -5,20 +5,21 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/results', methods=['POST'])
+@app.route('/checkout', methods=['POST'])
 def create():
     print(request.form)
-    print('Name', request.form['Name'])
+    print('OQuantity', request.form['OQuantity'])
+    print('MQuantity', request.form['MQuantity'])
+    print('SQuantity', request.form['SQuantity'])
+    print('IQuantity', request.form['IQuantity'])
+    print('FName', request.form['FName'])
+    print('LName', request.form['LName'])
     print('Email', request.form['Email'])
+    print('Address', request.form['Address'])
     print('City', request.form['City'])
-    print('Activity', request.form['Activity'])
-    print('Other', request.form['Other'])
+    print('State', request.form['State'])
+    print('Zip', request.form['Zip'])
     return render_template("created.html")
-
-@app.route('/danger')
-def danger():
-    return redirect('/')
-    alert("A user tried to visit /danger. We have redirected the user to /");
 
 if __name__=="__main__":
     app.run(debug=True)
