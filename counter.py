@@ -10,7 +10,7 @@ def index():
     else:
         session["count"] = 0
     print(session["count"])
-    return render_template("index.html", count = session["count"])
+    return render_template("counterindex.html", count = session["count"])
 
 @app.route("/increment", methods=["POST"])
 def increment_by_two():
