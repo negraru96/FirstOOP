@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    .container{
+      text-align: center;
+      margin-top: 10%;
+      font-size: 80px;
+    }
+    .container2{
+      text-align: center;
+      margin-top: 1%;
+      margin-right: 2%;
+      font-size: 50px;
+    }
+    .btn-primary{
+      background-color: red;
+      font-size: 30px;
+    }
+    .btn-primary1{
+      background-color: orange;
+      font-size: 30px;
+    }
+    .btn-primary2{
+      background-color: yellow;
+      font-size: 30px;
+    }
+    .btn-primary3{
+      background-color: brown;
+      font-size: 30px;
+      color: white;
+    }
+    .btn-primary4{
+      background-color: silver;
+      font-size: 30px;
+    }
+    .btn-primary5{
+      background-color: gold;
+      font-size: 30px;
+    }
+    .btn-primary6{
+      background-color: cyan;
+      font-size: 30px;
+    }
+    .btn-primary7{
+      background-color: pink;
+      font-size: 30px;
+    }
+    .btn-primary8{
+      background-color: black;
+      font-size: 30px;
+      color: white;
+    }
+    .btn-reset{
+      font-size: 30px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Counter</div>
+      <div class="counter">{{ count }} times</div>
+    </div>
+    <div class="container2">
+      <form action="/increment" method="post">
+        <button class="btn-primary">Add two visits</button>
+      </form>
+      <form action="/increment1" method="post">
+        <button class="btn-primary1">Add six visits</button>
+      </form>
+      <form action="/increment2" method="post">
+        <button class="btn-primary2">Add ten visits</button>
+      </form>
+      <form action="/increment3" method="post">
+        <button class="btn-primary3">Add a hundred visits</button>
+      </form>
+      <form action="/increment4" method="post">
+        <button class="btn-primary4">Add a thousand visits</button>
+      </form>
+      <form action="/increment5" method="post">
+        <button class="btn-primary5">Add ten thousand visits</button>
+      </form>
+      <form action="/increment6" method="post">
+        <button class="btn-primary6">Add a hundred thousand visits</button>
+      </form>
+      <form action="/increment7" method="post">
+        <button class="btn-primary7">Add a million visits</button>
+      </form>
+      <form action="/increment8" method="post">
+        <button class="btn-primary8">Don't press this button unless you want to break your computer</button>
+      </form>
+      <form action="/clear" method="post">
+        <button class="btn-reset">reset</button>
+      </form>
+    </div>
+  </body>
+</html>
