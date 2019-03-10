@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    .wrapper{
+      background-color: black;
+      height: 510px;
+      width: 1000px;
+      text-align:center;
+      margin: 15%;
+      margin-bottom: 10%;
+    }
+    .your_gold{
+      color: gold;
+      display: inline-block;
+      position: absolute;
+      top: 30%;
+      font-size: 30px;
+      font-family: arial black;
+    }
+    .goldbar{
+      height: 25px;
+      width: 200px;
+      border-style: groove;
+      border-color: gold;
+    }
+    .form-group{
+      display: inline-block;
+      color: white;
+      margin-top: 2%;
+    }
+    .form-control{
+      display: inline-block;
+      height: 100px;
+      width: 825px;
+      margin-right: 1%;
+      margin-top: 2%;
+      border-style: groove;
+      border-color: gold;
+    }
+    .fname{
+      display: inline-block;
+      margin-top: 10%;
+      margin-left: 4%;
+      font-size: 30px;
+      font-family: arial black;
+      font-weight: 100;
+      color: black;
+      position: absolute;
+    }
+    .Cname{
+      display: inline-block;
+      margin-top: 10%;
+      margin-left: 18%;
+      font-size: 30px;
+      font-family: arial black;
+      font-weight: 100;
+      color: black;
+      position: absolute;
+    }
+    .Hname{
+      display: inline-block;
+      margin-top: 10%;
+      margin-left: 31.5%;
+      font-size: 30px;
+      font-family: arial black;
+      font-weight: 100;
+      color: black;
+      position: absolute;
+    }
+    .Caname{
+      display: inline-block;
+      margin-top: 10%;
+      margin-left: 45%;
+      font-size: 30px;
+      font-family: arial black;
+      font-weight: 100;
+      color: black;
+      position: absolute;
+    }
+    .farm{
+      display: inline-block;
+      background-color: white;
+      height: 150px;
+      width: 150px;
+      margin: 2%;
+      margin-top: 13%;
+      border-style: groove;
+      border-color: gold;
+    }
+    .fndgld{
+      background-color: gold;
+      margin-top: 70%;
+      width: 100px;
+      border-style: solid;
+      border-color: black;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/yourgold" method="POST">
+        <div class="your_gold">
+        Your Gold: <input class="goldbar" name="gold" type="text" placeholder="0">
+        </div>
+      <form action"/process_money" method="POST">
+        <div class="fname">Farm</div>
+        <div class="Cname">Cave</div>
+        <div class="Hname">Home</div>
+        <div class="Caname">Casino</div>
+        <div class="farm">
+        <input name="property" type="hidden" value="Farm">
+        <input class="fndgld" type="submit" value="Find Gold">
+        </div>
+        <div class="farm">
+        <input name="property" type="hidden" value="Cave">
+        <input class="fndgld" type="submit" value="Find Gold">
+        </div>
+        <div class="farm">
+        <input name="property" type="hidden" value="House">
+        <input class="fndgld" type="submit" value="Find Gold">
+        </div>
+        <div class="farm">
+        <input name="property" type="hidden" value="Casino">
+        <input class="fndgld" type="submit" value="Find Gold">
+        </div>
+      </form>
+      <div class="form-group">
+        Activities <input class="form-control" type="text" name="Other" placeholder="" rows="3">
+      </div>
+    </div>
+  </body>
+</html>
